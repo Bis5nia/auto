@@ -183,13 +183,13 @@ rule-providers:
     type: http
     behavior: domain
     path: ./rule_provider/rule-reject.yaml
-    url: https://raw.githubusercontent.com/Bis5nia/simaster-auto/main/rule_provider/rule-reject.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-reject.yaml
     interval: 3600
   Direct:
     type: http
     behavior: domain
     path: ./rule_provider/rule-direct.yaml
-    url: https://raw.githubusercontent.com/Bis5nia/simaster-auto/main/rule_provider/rule-direct.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-direct.yaml
     interval: 3600
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
