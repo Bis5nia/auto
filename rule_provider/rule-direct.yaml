@@ -1,0 +1,28 @@
+payload:
+
+  # > RULE BY CLASHMWNS.COM
+  - "+.fb.com"
+  - "+.facebook.com"
+  - "+.fbcdn.net"
+  - "+.messenger.com"
+  - "+.instagram.com"
+  - "+.cdninstagram"
+  - "+.twitter.com"
+  - "+.twitpic.com"
+  - "+.xnxx.com"
+  - "+.xvideos.com"
+  - "+.opera-mini.net"
+  - "+.path.com"
+  - "+.discord.com"
+  - "+.discus.com"
+  - "+.line.me"
+  - "+.pinterest.com"
+  - "+.snapchat.com"
+  - "+.kuaishou.com"
+  - "+.weibo.com"
+  - "+.qq.com"
+  - "+.douyin.com"
+  - "+.linefriends.com"
+
+  # > untuk tambahan saja
+  - "+.arindo.net"
