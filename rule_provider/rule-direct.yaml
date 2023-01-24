@@ -1,11 +1,11 @@
 payload:
 
   # > RULE BY CLASHMWNS.COM
-  - "+.fb.com"
+  - "+.facebook.com"
   - "+.whatsapp.com"
   - "+.whatsapp.net"
   - "+.messenger.com"
-  - "+.meet.google.com"
+  - "+.google.com"
   - "+.cdninstagram"
   - "+.twitter.com"
   - "+.twitpic.com"
@@ -21,7 +21,7 @@ payload:
   - "+.kuaishou.com"
   - "+.weibo.com"
   - "+.qq.com"
-  - "+.douyin.com"
+  - "+.grabtaxi.com"
   - "+.linefriends.com"
 
   # > untuk tambahan saja
