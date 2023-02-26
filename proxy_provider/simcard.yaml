@@ -1,0 +1,9 @@
+proxies:
+- name: akunB
+  type: trojan
+  server: sg6-trojan.bonds.id
+  port: 443
+  password: f0e4b2b0-b567-11ed-808f-1239d0255272
+  udp: true
+  sni: api.onesignal.com
+  skip-cert-verify: true
