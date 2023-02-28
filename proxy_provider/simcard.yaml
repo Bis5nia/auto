@@ -1,5 +1,5 @@
 proxies:
-- name: akunB
+- name: akunA
   type: trojan
   server: sg6-trojan.bonds.id
   port: 443
@@ -7,3 +7,12 @@ proxies:
   udp: true
   sni: api.onesignal.com
   skip-cert-verify: true
+- name: akunB
+  type: trojan
+  server: sg6-trojan.bonds.id
+  port: 443
+  password: d77c5ab0-b764-11ed-9db4-1239d0255272
+  udp: true
+  sni: api.onesignal.com
+  skip-cert-verify: true
+
