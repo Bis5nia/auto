@@ -1,0 +1,34 @@
+
+proxies:
+- name: akunA
+  type: trojan
+  server: sg6-trojan.bonds.id
+  port: 443
+  password: f0e4b2b0-b567-11ed-808f-1239d0255272
+  udp: true
+  sni: api.onesignal.com
+  skip-cert-verify: true
+- name: akunB
+  type: trojan
+  server: sg6-trojan.bonds.id
+  port: 443
+  password: d77c5ab0-b764-11ed-9db4-1239d0255272
+  udp: true
+  sni: api.onesignal.com
+  skip-cert-verify: true
+- name: akunC
+  type: trojan
+  server: sgtro.ipservers.xyz
+  port: 443
+  password: jagoanssh-tejohar
+  udp: true
+  sni: api.onesignal.com
+  skip-cert-verify: true
+- name: akunD
+  type: trojan
+  server: sg-full.privateip.net
+  port: 443
+  password: e9617acf-3e1c-4340-a235-23d89de1376b
+  udp: true
+  sni: api.onesignal.com
+  skip-cert-verify: true
