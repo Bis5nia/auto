@@ -39,7 +39,7 @@ proxies:
   udp: true
   sni: sogood.linefriends.com
   skip-cert-verify: true
-- name: akun2
+- name: akun22
   type: trojan
   server: sg3-trojan.bonds.id
   port: 443
@@ -47,7 +47,7 @@ proxies:
   udp: true
   sni: me.ruangguru.com
   skip-cert-verify: true
-- name: Vmess WS
+- name: Vmess WS3
   type: vmess
   server: zendesk4.grabtaxi.com
   port: 80
