@@ -5,7 +5,7 @@ proxies:
   port: 443
   password: 4dfe3db0-bb1f-11ed-ab95-1239d0255272
   udp: true
-  sni: me.ruangguru.com
+  sni: 104.17.57.20:80
   skip-cert-verify: true
 - name: akun2
   type: trojan
@@ -13,7 +13,7 @@ proxies:
   port: 443
   password: d5e929b0-bb1f-11ed-9609-1239d0255272
   udp: true
-  sni: me.ruangguru.com
+  sni: 104.17.57.20:80
   skip-cert-verify: true
 - name: Vmess WS
   type: vmess
