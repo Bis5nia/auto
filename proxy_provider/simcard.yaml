@@ -17,8 +17,40 @@ proxies:
   skip-cert-verify: true
 - name: Vmess WS
   type: vmess
-  server: cdnodeb.visionplus.id
+  server: sogood.linefriends.com
   port: 443
+  uuid: f25de600-be6b-11ed-ab77-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sg-2.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg-2.test3.net
+- name: akun11
+  type: trojan
+  server: sg2-trojan.bonds.id
+  port: 443
+  password: 4dfe3db0-bb1f-11ed-ab95-1239d0255272
+  udp: true
+  sni: sogood.linefriends.com
+  skip-cert-verify: true
+- name: akun2
+  type: trojan
+  server: sg3-trojan.bonds.id
+  port: 443
+  password: d5e929b0-bb1f-11ed-9609-1239d0255272
+  udp: true
+  sni: me.ruangguru.com
+  skip-cert-verify: true
+- name: Vmess WS
+  type: vmess
+  server: zendesk4.grabtaxi.com
+  port: 80
   uuid: f25de600-be6b-11ed-ab77-1239d0255272
   alterId: 0
   cipher: auto
