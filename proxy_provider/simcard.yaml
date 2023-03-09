@@ -13,7 +13,7 @@ proxies:
   port: 443
   password: d5e929b0-bb1f-11ed-9609-1239d0255272
   udp: true
-  sni: meet.google.com
+  sni: me.ruangguru.com
   skip-cert-verify: true
 - name: Vmess WS
   type: vmess
@@ -23,8 +23,8 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
-  skip-cert-verify: false
+  tls: true
+  skip-cert-verify: true
   servername: sg-2.test3.net
   network: ws
   ws-opts:
