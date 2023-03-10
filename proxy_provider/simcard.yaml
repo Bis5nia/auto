@@ -13,11 +13,11 @@ proxies:
   port: 443
   password: d5e929b0-bb1f-11ed-9609-1239d0255272
   udp: true
-  sni: 104.17.57.20:80
+  sni: zendesk4.grabtaxi.com:80
   skip-cert-verify: true
 - name: Vmess WS
   type: vmess
-  server: sogood.linefriends.com
+  server: zendesk4.grabtaxi.com
   port: 443
   uuid: f25de600-be6b-11ed-ab77-1239d0255272
   alterId: 0
