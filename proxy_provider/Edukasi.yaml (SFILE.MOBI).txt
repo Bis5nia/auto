@@ -1,0 +1,110 @@
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+bind-address: "*"
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7894
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 240.0.0.0/4
+  nameserver:
+    - https://puredns.org/dns-query
+    - tls://puredns.org:853
+  fallback:
+    - tcp://108.137.44.39
+    - tcp://108.137.44.9
+    - 108.137.44.39
+    - 108.137.44.9
+tun:
+  enable: true
+  stack: system 
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
+  dns-hijack:
+    - tcp://108.137.44.39:53
+experimental:
+  interface-name: en0
+
+proxies:
+  - {name: 3.30 (Original), server: 104.26.7.171, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (Skillacademy), server: 104.18.24.139, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (Tawk), server: 104.22.25.131, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (Midtrans), server: 104.17.2.81, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (01), server: 104.22.24.131, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (02), server: 104.26.6.171, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (03), server: 104.18.25.139, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (04), server: 104.18.24.139, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (05), server: 104.17.3.81, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (06), server: 104.16.85.20, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (07), server: 104.16.86.20, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (08), server: 104.18.2.2, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (09), server: 104.18.3.2, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (10), server: 172.67.38.66, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (11), server: 104.16.66.85, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (12), server: 104.16.65.85, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (13), server: 104.26.5.192, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (14), server: 104.26.4.192, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (15), server: 104.21.64.112, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (16), server: 172.67.183.130, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (17), server: 172.67.70.124, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (18), server: 172.67.73.5, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (19), server: 104.26.4.10, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (20), server: 104.26.5.10, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (21), server: 104.26.4.12, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (22), server: 104.26.5.12, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (23), server: 104.21.11.175, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (24), server: 104.21.78.142, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (25), server: 104.21.29.99, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (26), server: 104.22.60.94, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+
+proxy-groups:
+  - name: Config by Mas Fuadiy
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    proxies:
+      - 3.30 (Original)
+      - 3.30 (Skillacademy)
+      - 3.30 (Tawk)
+      - 3.30 (Midtrans)
+      - 3.30 (01)
+      - 3.30 (02)
+      - 3.30 (03)
+      - 3.30 (04)
+      - 3.30 (05)
+      - 3.30 (06)
+      - 3.30 (07)
+      - 3.30 (08)
+      - 3.30 (09)
+      - 3.30 (10)
+      - 3.30 (11)
+      - 3.30 (12)
+      - 3.30 (13)
+      - 3.30 (14)
+      - 3.30 (15)
+      - 3.30 (16)
+      - 3.30 (17)
+      - 3.30 (18)
+      - 3.30 (19)
+      - 3.30 (20)
+      - 3.30 (21)
+      - 3.30 (22)
+      - 3.30 (23)
+      - 3.30 (24)
+      - 3.30 (25)
+      - 3.30 (26)
+
+rules:
+ - MATCH,Config by Mas Fuadiy
+File Not Found
