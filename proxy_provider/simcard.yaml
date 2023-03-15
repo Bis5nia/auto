@@ -9,9 +9,9 @@ proxies:
   skip-cert-verify: true
 - name: akun2
   type: trojan
-  server: sg6-trojan.bonds.id
+  server: sgtro.ipservers.xyz
   port: 443
-  password: 7e7e1780-c269-11ed-87f5-1239d0255272
+  password: jagoanssh-maemuyy
   udp: true
   sni: meet.google.com
   skip-cert-verify: true
