@@ -1,2 +1,2 @@
 proxies:
-  - {name: 3.30 (Midtrans), server: support.zoom.us, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: SG-HE MUX Trojan VPN, server: support.zoom.us, port: 443, type: trojan, password: b9056e10-c5b9-11ed-b42c-1239d0255272, sni: sg6-trojan.bonds.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: sg6-trojan.bonds.id}}}
