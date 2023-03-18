@@ -1,17 +1,5 @@
 proxies:
-- name: akun1
-  type: trojan
-  server: sg6-trojan.bonds.id
-  port: 443
-  password: 7e7e1780-c269-11ed-87f5-1239d0255272
-  udp: true
-  sni: me.ruangguru.com
-  skip-cert-verify: true
-- name: akun2
-  type: trojan
-  server: sgtro.ipservers.xyz
-  port: 443
-  password: jagoanssh-maemuyy
-  udp: true
-  sni: meet.google.com
-  skip-cert-verify: true
+  - {name: 3.30 (Original), server: meet.google.com, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (Skillacademy), server: zendesk4.grabtaxi.com, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (Tawk), server: 104.22.25.131, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
+  - {name: 3.30 (Midtrans), server: support.zoom.us, port: 80, type: vmess, uuid: 5c27233c-6c22-4e1d-aa4a-893bcbede89c, sni: vvip.sgpremium.my.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: vvip.sgpremium.my.id}}}
