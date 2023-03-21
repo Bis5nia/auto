@@ -1,2 +1,0 @@
-proxies:
-  - {name: SG-HE MUX Trojan VPN, server: support.zoom.us, port: 443, type: trojan, password: b9056e10-c5b9-11ed-b42c-1239d0255272, sni: sg6-trojan.bonds.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: sg6-trojan.bonds.id}}}
