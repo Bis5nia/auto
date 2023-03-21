@@ -1,5 +1,0 @@
-proxies:
-  - {name: 1, server: wcpstatic.microsoft.com, port: 443, type: trojan, password: 8bbcbda0-c71c-11ed-8a77-1239d0255272, sni: sg6-trojan.bonds.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: sg6-trojan.bonds.id}}}
-  - {name: 2, server: 104.18.10.39, port: 443, type: trojan, password: 8bbcbda0-c71c-11ed-8a77-1239d0255272, sni: sg6-trojan.bonds.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: sg6-trojan.bonds.id}}}
-  - {name: 3, server: sg6-trojan.bonds.id, port: 443, type: trojan, password: 8bbcbda0-c71c-11ed-8a77-1239d0255272, sni: ocem-assessment.medallia.com, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: ocem-assessment.medallia.com}}}
-  - {name: 4, server: zoom.us, port: 443, type: trojan, password: 8bbcbda0-c71c-11ed-8a77-1239d0255272, sni: sg6-trojan.bonds.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: sg6-trojan.bonds.id}}}
