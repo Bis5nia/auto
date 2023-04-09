@@ -1,0 +1,104 @@
+---
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 7893
+allow-lan: true
+mode: script
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+external-ui: folder
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  fallback-filter:
+    geoip: true
+    geoip-code: ID
+proxy-providers:
+  SIMCARD:
+    type: http
+    path: ./proxy_provider/simcard.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/proxy_provider/simcard.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://google.com
+      interval: 99
+proxy-groups:
+- name: SIMASTER-AUTO
+  type: select
+  disable-udp: false
+  proxies:
+  - SIMCARD-PING
+  - DIRECT
+  url: http://google.com
+  interval: '99'
+- name: SIMCARD-PING
+  type: url-test
+  disable-udp: false
+  use:
+  - SIMCARD
+  url: http://google.com
+  interval: '99'
+rule-providers:
+  Reject:
+    type: http
+    behavior: domain
+    path: ./rule_provider/rule-reject.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-reject.yaml
+    interval: 3600
+  Direct:
+    type: http
+    behavior: domain
+    path: ./rule_provider/rule-direct.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-direct.yaml
+    interval: 3600
+  adaway:
+    type: http
+    behavior: classical
+    path: "./rule_provider/adaway.yaml"
+    url: https://raw.githubusercontent.com/hillz2/openclash_adblock/main/adaway.yaml
+    interval: 14400 # Update rules every 4 hours
+  adguard_dns:
+    type: http
+    behavior: classical
+    path: "./rule_provider/AdguardDNS.yaml"
+    url: https://raw.githubusercontent.com/hillz2/openclash_adblock/main/AdguardDNS.yaml
+    interval: 14400 # Update rules every 4 hours
+  abpindo:
+    type: http
+    behavior: classical
+    path: "./rule_provider/ABPindo.yaml"
+    url: https://raw.githubusercontent.com/hillz2/openclash_adblock/main/ABPindo.yaml
+    interval: 14400 # Update rules every 4 hours
+    
+rules:
+# Block ads
+- RULE-SET,adaway,REJECT
+- RULE-SET,adguard_dns,REJECT
+- RULE-SET,abpindo,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,Direct,DIRECT
+- RULE-SET,Reject,REJECT
+- GEOIP,ID,SIMASTER-AUTO
+- MATCH,SIMASTER-AUTO
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+profile:
+  store-selected: true
+  store-fake-ip: true
+secret: '123456'
+bind-address: "*"
+experimental:
+  sniff-tls-sni: true
+authentication:
+- Clash:hckUjOup
