@@ -1,7 +1,7 @@
 proxies:
   - {name: 2, server: noice.id, port: 443, type: trojan, password: 8bbcbda0-c71c-11ed-8a77-1239d0255272, sni: sg6-trojan.bonds.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: sg6-trojan.bonds.id}}}
   - {name: t2, server: noice.id, port: 443, type: trojan, password: jagoanssh-gudalah, sni: sgtro.ipservers.xyz, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /trojan, headers: {Host: sgtro.ipservers.xyz}}}
-  - name: vip-bootloop
+  - name: vip
     server: noice.id
     port: 80
     type: vmess
@@ -17,19 +17,19 @@ proxies:
       headers:
         Host: idv2-2.vip-svr.com
     udp: true
-  - name: vip
+  - name: vipp
     server: noice.id
     port: 80
     type: vmess
-    uuid: 92c112f9-833a-449a-9644-534deefd0050
+    uuid: 47841ff0-d6d5-11ed-b033-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: sgdo.bcodestore.my.id
+    servername: sg-8.0rd.net
     network: ws
     ws-opts:
-      path: /vmess
+      path: /d6xwv4mg
       headers:
-        Host: sgdo.bcodestore.my.id
+        Host: sg-8.0rd.net
     udp: true
