@@ -21,17 +21,17 @@ proxies:
     server: noice.id
     port: 80
     type: vmess
-    uuid: 7b3621e0-db5b-11ed-8c19-1239d0255272
+    uuid: 71e16647-9574-4617-9aad-98292fc159b2
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: sg3.socifiles.com
+    servername: sg-ws.magic-cat.tk
     network: ws
     ws-opts:
-      path: /vmws
+      path: /vmess/
       headers:
-        Host: sg3.socifiles.com
+        Host: sg-ws.magic-cat.tk
     udp: true
   - name: vip-id
     server: noice.id
