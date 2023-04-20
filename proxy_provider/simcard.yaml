@@ -37,15 +37,15 @@ proxies:
     server: noice.id
     port: 80
     type: vmess
-    uuid: ee4c8640-db5c-11ed-b237-205c6d5f5d78
+    uuid: 6cd5490d-3aff-46b0-8c15-a96808d25f98
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: id-1.0rd.net
+    servername: sg1.makhlukvpn.my.id
     network: ws
     ws-opts:
-      path: /q7gzv5ic
+      path: /vmess-ntls
       headers:
-        Host: id-1.0rd.net
+        Host: sg1.makhlukvpn.my.id
     udp: true
