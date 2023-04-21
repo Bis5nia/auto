@@ -1,6 +1,7 @@
 proxies:
   - {name: 2, server: noice.id, port: 443, type: trojan, password: 8bbcbda0-c71c-11ed-8a77-1239d0255272, sni: sg6-trojan.bonds.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: sg6-trojan.bonds.id}}}
   - {name: t2, server: noice.id, port: 443, type: trojan, password: jagoanssh-gudalah, sni: sgtro.ipservers.xyz, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /trojan, headers: {Host: sgtro.ipservers.xyz}}}
+  - {name: 'XL', uuid: 962d8413-b6f2-46a6-a29d-ae0b53854c77, server: noice.id, port: 443, type: vmess, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: effata.sgprovvip.my.id, network: ws, ws-opts: {path: /vmesss, headers: {Host: effata.sgprovvip.my.id}}, udp: true}
   - name: vip
     server: noice.id
     port: 80
