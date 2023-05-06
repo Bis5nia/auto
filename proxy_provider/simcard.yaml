@@ -1,0 +1,20 @@
+proxies:
+  - {name: 2, server: noice.id, port: 443, type: trojan, password: 8bbcbda0-c71c-11ed-8a77-1239d0255272, sni: sg6-trojan.bonds.id, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /howdy, headers: {Host: sg6-trojan.bonds.id}}}
+  - name: vip
+    server: noice.id
+    port: 80
+    type: vmess
+    uuid: fa866930-d581-11ed-ad01-939feca6c424
+    alterId: 16
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: idv2-2.vip-svr.com
+    network: ws
+    ws-opts:
+      path: /vip
+      headers:
+        Host: idv2-2.vip-svr.com
+    udp: true
+  - {name: 'ISATEDU 🇸🇬 SG', server: 104.16.226.91, port: 80, type: vmess, uuid: 38dcfe62-e82f-40e5-94ae-d7b995a3b075, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: sg-ipung.tohsaka.my.id, network: ws, ws-opts: {path: /vmesss, headers: {Host: sg-ipung.tohsaka.my.id, X-Online-Host: tor.cloudflare-dns.com, X-Forward-Host: tor.cloudflare-dns.com}}, udp: true, strategy: consistent-hashing, url: 'https://dns.alidns.com/dns-query', interval: 300}
+  - {name: 'ISATOPOK 🇸🇬 SG', server: 172.67.70.101, port: 8880, type: vmess, uuid: 38dcfe62-e82f-40e5-94ae-d7b995a3b075, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: sg-ipung.tohsaka.my.id, network: ws, ws-opts: {path: /vmesss, headers: {Host: sg-ipung.tohsaka.my.id, X-Online-Host: tor.cloudflare-dns.com, X-Forward-Host: tor.cloudflare-dns.com}}, udp: true,}
