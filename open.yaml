@@ -1,0 +1,152 @@
+---
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 7893
+allow-lan: true
+mode: script
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+external-ui: folder
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  fallback-filter:
+    geoip: true
+    geoip-code: ID
+proxy-providers:
+  SIMCARD:
+    type: http
+    path: ./proxy_provider/simcard.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/proxy_provider/simcard.yaml
+    health-check:
+      enable: true
+      url: http://google.com
+      interval: 99
+proxy-groups:
+- name: INJECT
+  type: select
+  disable-udp: false
+  proxies:
+  - SERPER
+  - DIRECT
+  url: http://123.xl.co.id
+  interval: '99'
+- name: ADS
+  type: select
+  disable-udp: false
+  proxies:
+  - SERPER
+  - DIRECT
+  - REJECT
+  url: http://123.xl.co.id
+  interval: '99'
+- name: tik
+  type: select
+  disable-udp: false
+  proxies:
+  - SERPER
+  - DIRECT
+  - REJECT
+  url: http://123.xl.co.id
+  interval: '99'
+- name: yut
+  type: select
+  disable-udp: false
+  proxies:
+  - SERPER
+  - DIRECT
+  - REJECT
+  url: http://123.xl.co.id
+  interval: '99'
+- name: SERPER
+  type: select
+  disable-udp: false
+  use:
+  - SIMCARD
+  url: http://123.xl.co.id
+  interval: '99'
+rule-providers:
+  Reject:
+    type: http
+    behavior: domain
+    path: ./rule_provider/rule-reject.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-reject.yaml
+  Direct:
+    type: http
+    behavior: domain
+    path: ./rule_provider/rule-direct.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-direct.yaml
+  adaway:
+    type: http
+    behavior: classical
+    path: "./rule_provider/adaway.yaml"
+    url: https://raw.githubusercontent.com/hillz2/openclash_adblock/main/adaway.yaml
+    interval: 14400
+  adguard_dns:
+    type: http
+    behavior: classical
+    path: "./rule_provider/AdguardDNS.yaml"
+    url: https://raw.githubusercontent.com/hillz2/openclash_adblock/main/AdguardDNS.yaml
+    interval: 14400
+  abpindo:
+    type: http
+    behavior: classical
+    path: "./rule_provider/ABPindo.yaml"
+    url: https://raw.githubusercontent.com/hillz2/openclash_adblock/main/ABPindo.yaml
+    interval: 14400
+  Tiktok:
+    type: http
+    behavior: domain
+    path: ./rule_provider/rule-tiktok.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-tiktok.yaml
+  Yutub:
+    type: http
+    behavior: domain
+    path: ./rule_provider/rule-yutub.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-yutub.yaml
+  Fb:
+    type: http
+    behavior: domain
+    path: ./rule_provider/rule-fb.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-fb.yaml
+  Wa:
+    type: http
+    behavior: domain
+    path: ./rule_provider/rule-wa.yaml
+    url: https://raw.githubusercontent.com/Bis5nia/auto/main/rule_provider/rule-wa.yaml
+    
+rules:
+# Block ads
+- RULE-SET,adaway,REJECT
+- RULE-SET,adguard_dns,ADS
+- RULE-SET,abpindo,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,Direct,DIRECT
+- RULE-SET,Wa,DIRECT
+- RULE-SET,Reject,REJECT
+- RULE-SET,Tiktok,tik
+- RULE-SET,Fb,tik
+- RULE-SET,Yutub,yut
+- GEOIP,ID,INJECT
+- MATCH,INJECT
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+profile:
+  store-selected: true
+  store-fake-ip: true
+secret: '123456'
+bind-address: "*"
+experimental:
+  sniff-tls-sni: true
+authentication:
+- Clash:hckUjOup
