@@ -1,0 +1,3 @@
+proxies:
+  - {name: ml, server: contabox.natanvpn.xyz, port: 443, type: trojan, password: aeb55933-0552-4870-a592-fbed6442aec0, sni: m.mobilelegends.com, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /trojan, headers: {Host: contabox.natanvpn.xyz}}}
+  - {name: grab, server: zendesk4.grabtaxi.com, port: 443, type: trojan, password: aeb55933-0552-4870-a592-fbed6442aec0, sni: contabox.natanvpn.xyz, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /trojan, headers: {Host: contabox.natanvpn.xyz}}}
