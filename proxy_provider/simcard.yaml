@@ -1,3 +1,0 @@
-proxies:
-  - {name: 1, uuid: b044c88d-4b0d-400b-9cf3-4ea9c4416401, server: zendesk4.grabtaxi.com, port: 80, type: vmess, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /vmess, headers: {Host: id1vm.xservs.xyz}}}
-  - {name: 2, uuid: b044c88d-4b0d-400b-9cf3-4ea9c4416401, server: id1vm.xservs.xyz, port: 443, type: vmess, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true, servername: m.mobilelegends.com, network: ws, ws-opts: {path: /vmess, headers: {Host: id1vm.xservs.xyz}}}
