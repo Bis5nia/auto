@@ -1,3 +1,61 @@
 proxies:
-  - {name: ml, server: contabox.natanvpn.xyz, port: 443, type: trojan, password: aeb55933-0552-4870-a592-fbed6442aec0, sni: m.mobilelegends.com, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /trojan, headers: {Host: contabox.natanvpn.xyz}}}
-  - {name: grab, server: zendesk4.grabtaxi.com, port: 443, type: trojan, password: aeb55933-0552-4870-a592-fbed6442aec0, sni: contabox.natanvpn.xyz, alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: ws, ws-opts: {path: /trojan, headers: {Host: contabox.natanvpn.xyz}}}
+- name: Larang
+  server: beacon.liveon.id
+  port: 443
+  type: trojan
+  password: d54bb2aa-e8ea-4c30-9cb5-21d62e1550fd
+  sni: biznet-v.bhm.my.id
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: biznet-v.bhm.my.id
+- name: Jagianjyu
+  server: 104.21.8.121
+  port: 443
+  type: trojan
+  password: e3a89a9c-fda2-421e-8a62-2aa2ac359b7a
+  sni: id24.vpnstunnel.me
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: id24.vpnstunnel.me    server: beacon.liveon.id
+    port: 443
+    type: trojan
+    password: ee823d27-4079-4115-bf94-6f8e12cfcb5a
+    skip-cert-verify: true
+    sni: id-rm.vpnstunnel.me
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: id-rm.vpnstunnel.me
+    udp: true
+  - name: howdy
+    server: beacon.liveon.id
+    port: 443
+    type: trojan
+    password: 54205450-eaac-11ed-88c7-1239d0255272
+    skip-cert-verify: true
+    sni: id-1.test3.net
+    udp: true
+  - name: opentunnel.net-vmess
+    server: beacon.liveon.id
+    port: 80
+    type: vmess
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+    alterId: 16
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-ddddddd/worryfree
+      headers:
+        Host: idv-1.openv2ray.com
+    udp: true
