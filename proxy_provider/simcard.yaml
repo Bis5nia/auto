@@ -1,5 +1,5 @@
 proxies:
-- name: Larang
+- name: Larangj
   server: beacon.liveon.id
   port: 443
   type: trojan
@@ -27,3 +27,16 @@ proxies:
       headers:
         Host: beacon.liveon.id
     udp: true
+- name: Larang
+  server: beacon.liveon.id
+  port: 443
+  type: trojan
+  password: CvbaAtoHrsQHLEV
+  sni: sg4.xstore.my.id
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.xstore.my.id
